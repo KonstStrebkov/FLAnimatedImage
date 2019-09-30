@@ -99,6 +99,10 @@
 
 - (void)setAnimatedImage:(FLAnimatedImage *)animatedImage
 {
+    if ((_animatedImage == nil && animatedImage == nil)) {
+        return;
+    }
+    
     if (![_animatedImage isEqual:animatedImage]) {
         if (animatedImage) {
             // Clear out the image.
